@@ -4,28 +4,32 @@ export default ({ currentUser }) => {
   const links = [
     !currentUser && { label: 'Sign Up', href: '/auth/signup' },
     !currentUser && { label: 'Sign In', href: '/auth/signin' },
-    currentUser && { label: 'Sign Out', href: '/auth/signout' }
+    currentUser && { label: 'Edit Subcribe', href: '/edit' },
+    currentUser && { label: 'Subcribed Career', href: '/career' },
+    currentUser && { label: 'Sign Out', href: '/auth/signout' },
+    
+   
   ]
     .filter(linkConfig => linkConfig)
     .map(({ label, href }) => {
       return (
-        <li key={href} className="nav-item">
+     
           <Link href={href}>
             <a className="nav-link">{label}</a>
           </Link>
-        </li>
+
       );
     });
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="departNav">
       <Link href="/">
-        <a className="navbar-brand">GitTix</a>
+        <a className="navbar-brand">Career Subscribe</a>
       </Link>
 
-      <div className="d-flex justify-content-end">
-        <ul className="nav d-flex align-items-center">{links}</ul>
-      </div>
+  
+       {links}
+  
     </nav>
   );
 };

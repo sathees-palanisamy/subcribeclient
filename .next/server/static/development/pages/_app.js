@@ -146,27 +146,24 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     label: 'Sign In',
     href: '/auth/signin'
   }, currentUser && {
+    label: 'Edit Subcribe',
+    href: '/edit'
+  }, currentUser && {
+    label: 'Subcribed Career',
+    href: '/career'
+  }, currentUser && {
     label: 'Sign Out',
     href: '/auth/signout'
   }].filter(linkConfig => linkConfig).map(({
     label,
     href
   }) => {
-    return __jsx("li", {
-      key: href,
-      className: "nav-item",
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12,
-        columnNumber: 9
-      }
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: href,
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13,
+        lineNumber: 17,
         columnNumber: 11
       }
     }, __jsx("a", {
@@ -174,17 +171,17 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14,
+        lineNumber: 18,
         columnNumber: 13
       }
-    }, label)));
+    }, label));
   });
   return __jsx("nav", {
-    className: "navbar navbar-light bg-light",
+    className: "departNav",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 25,
       columnNumber: 5
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -192,7 +189,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 26,
       columnNumber: 7
     }
   }, __jsx("a", {
@@ -200,26 +197,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 9
-    }
-  }, "GitTix")), __jsx("div", {
-    className: "d-flex justify-content-end",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 7
-    }
-  }, __jsx("ul", {
-    className: "nav d-flex align-items-center",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 27,
       columnNumber: 9
     }
-  }, links)));
+  }, "Career Subscribe")), links);
 });
 
 /***/ }),
@@ -330,17 +311,6 @@ function _typeof(obj) {
 }
 
 module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/bootstrap/dist/css/bootstrap.css":
-/*!*******************************************************!*\
-  !*** ./node_modules/bootstrap/dist/css/bootstrap.css ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ }),
 
@@ -1910,6 +1880,17 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./pages/Home.css":
+/*!************************!*\
+  !*** ./pages/Home.css ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./pages/_app.js":
 /*!***********************!*\
   !*** ./pages/_app.js ***!
@@ -1921,10 +1902,11 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ "./node_modules/bootstrap/dist/css/bootstrap.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _api_build_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../api/build-client */ "./api/build-client.js");
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/header */ "./components/header.js");
+/* harmony import */ var _api_build_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api/build-client */ "./api/build-client.js");
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/header */ "./components/header.js");
+/* harmony import */ var _store_department_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/department-context */ "./store/department-context.js");
+/* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Home.css */ "./pages/Home.css");
+/* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Home_css__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/satheeskumarpalanisamy/service/careerservice/client/pages/_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -1941,39 +1923,47 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+
 const AppComponent = ({
   Component,
   pageProps,
   currentUser
 }) => {
-  return __jsx("div", {
+  return __jsx(_store_department_context__WEBPACK_IMPORTED_MODULE_3__["DepartmentContextProvider"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 8,
       columnNumber: 5
     }
-  }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({
+  }, __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 5
+    }
+  }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
     currentUser: currentUser
   }, pageProps, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 10,
       columnNumber: 7
     }
   })), __jsx(Component, _extends({}, pageProps, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 11,
       columnNumber: 7
     }
-  })));
+  }))));
 };
 
 AppComponent.getInitialProps = async appContext => {
-  const client = Object(_api_build_client__WEBPACK_IMPORTED_MODULE_2__["default"])(appContext.ctx);
+  const client = Object(_api_build_client__WEBPACK_IMPORTED_MODULE_1__["default"])(appContext.ctx);
   const {
     data
   } = await client.get('/api/users/currentuser');
@@ -1989,6 +1979,54 @@ AppComponent.getInitialProps = async appContext => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AppComponent);
+
+/***/ }),
+
+/***/ "./store/department-context.js":
+/*!*************************************!*\
+  !*** ./store/department-context.js ***!
+  \*************************************/
+/*! exports provided: DepartmentContextProvider, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DepartmentContextProvider", function() { return DepartmentContextProvider; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/satheeskumarpalanisamy/service/careerservice/client/store/department-context.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const DepartmentContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])({
+  department: '',
+  showDepartment: function (departmentData) {}
+});
+function DepartmentContextProvider(props) {
+  const {
+    0: activeDepartment,
+    1: setActiveDepartment
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
+
+  function showDepartmentHandler(DepartmentData) {
+    setActiveDepartment(DepartmentData);
+  }
+
+  const context = {
+    department: activeDepartment,
+    showDepartment: showDepartmentHandler
+  };
+  return __jsx(DepartmentContext.Provider, {
+    value: context,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 5
+    }
+  }, props.children);
+}
+/* harmony default export */ __webpack_exports__["default"] = (DepartmentContext);
 
 /***/ }),
 

@@ -1,13 +1,16 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import buildClient from '../api/build-client';
 import Header from '../components/header';
+import { DepartmentContextProvider } from '../store/department-context';
+import './Home.css';
 
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (
+    <DepartmentContextProvider>
     <div>
       <Header currentUser={currentUser} {...pageProps}/>
       <Component {...pageProps} />
     </div>
+    </DepartmentContextProvider>
   );
 };
 

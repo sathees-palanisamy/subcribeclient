@@ -14,6 +14,7 @@
     "bootstrap": "^4.4.1",
     "cookie": "^0.4.1",
     "next": "^9.3.4",
+    "primereact": "^6.3.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

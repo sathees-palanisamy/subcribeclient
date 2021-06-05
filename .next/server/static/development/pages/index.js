@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -135,7 +135,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _store_department_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/department-context */ "./store/department-context.js");
 var _jsxFileName = "/Users/satheeskumarpalanisamy/service/careerservice/client/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -144,113 +143,83 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
 const LandingPage = ({
   currentUser
 }) => {
-  const departmentCtx = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_store_department_context__WEBPACK_IMPORTED_MODULE_4__["default"]);
-  const {
-    0: depList,
-    1: SetDepList
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
-  console.log('currentUser:' + currentUser);
   const router = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["useRouter"])();
-
-  const updateCatery = cate => {
-    departmentCtx.showDepartment(cate); //props.cateUpateExec(cate);
-
-    router.push("/career");
-  };
-
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/subcribe").then(response => {
-      SetDepList([...response.data.departlist]);
-    }).catch(error => {
-      console.log(error);
-    });
-  }, []);
-  const depRenderList = depList.map((sinDep, index) => {
-    return __jsx("div", {
-      key: index,
-      className: "p-col-12",
-      onClick: e => updateCatery(sinDep),
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37,
-        columnNumber: 4
-      }
-    }, __jsx("div", {
-      className: "product-list-item",
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 39,
-        columnNumber: 7
-      }
-    }, __jsx("div", {
-      className: "product-list-detail",
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41,
-        columnNumber: 7
-      }
-    }, __jsx("br", {
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42,
-        columnNumber: 13
-      }
-    }), __jsx("div", {
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44,
-        columnNumber: 13
-      }
-    }, __jsx("div", {
-      className: "product-name",
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46,
-        columnNumber: 13
-      }
-    }, sinDep)), __jsx("br", {
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 48,
-        columnNumber: 13
-      }
-    }))));
-  });
-  return currentUser ? __jsx("div", {
-    className: "container",
+  return __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 11,
       columnNumber: 5
     }
   }, __jsx("div", {
-    className: "dataview-demo",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 7
-    }
-  }, depRenderList)) : __jsx("h1", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 12,
       columnNumber: 5
     }
-  }, "You are NOT signed in");
+  }, __jsx("div", {
+    className: "HomeStyle",
+    style: {
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(./Homepic.jpeg)`
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "hero-text-box clearfix",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 9
+    }
+  }, __jsx("h1", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 13
+    }
+  }, "Share Your Career Path"), __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 13
+    }
+  }, "Guide our Junior's to pursue a career that is meaningful and fulfilling"), __jsx("br", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 13
+    }
+  }), __jsx("a", {
+    className: "btn btn-full",
+    href: "/share",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 13
+    }
+  }, "Share Your's"), __jsx("a", {
+    className: "btn btn-ghost",
+    href: "/department",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }, "Analyse Other's")))));
 };
 
 LandingPage.getInitialProps = async context => {
@@ -267,55 +236,7 @@ LandingPage.getInitialProps = async context => {
 
 /***/ }),
 
-/***/ "./store/department-context.js":
-/*!*************************************!*\
-  !*** ./store/department-context.js ***!
-  \*************************************/
-/*! exports provided: DepartmentContextProvider, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DepartmentContextProvider", function() { return DepartmentContextProvider; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/satheeskumarpalanisamy/service/careerservice/client/store/department-context.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const DepartmentContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])({
-  department: '',
-  showDepartment: function (departmentData) {}
-});
-function DepartmentContextProvider(props) {
-  const {
-    0: activeDepartment,
-    1: setActiveDepartment
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
-
-  function showDepartmentHandler(DepartmentData) {
-    setActiveDepartment(DepartmentData);
-  }
-
-  const context = {
-    department: activeDepartment,
-    showDepartment: showDepartmentHandler
-  };
-  return __jsx(DepartmentContext.Provider, {
-    value: context,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 5
-    }
-  }, props.children);
-}
-/* harmony default export */ __webpack_exports__["default"] = (DepartmentContext);
-
-/***/ }),
-
-/***/ 6:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

@@ -2,68 +2,26 @@ import buildClient from '../api/build-client';
 import { useState , useEffect, useContext} from 'react';
 import axios from 'axios';
 import { useRouter } from "next/router";
-import DepartmentContext from '../store/department-context';
+
 
 const LandingPage = ({ currentUser }) => {
-  const departmentCtx = useContext(DepartmentContext);
-  const [depList, SetDepList] = useState([]);
-  console.log('currentUser:' + currentUser);
   const router = useRouter();
 
-  const updateCatery= (cate) => {
-    departmentCtx.showDepartment(cate);
-
-    //props.cateUpateExec(cate);
-    router.push("/career");
-
-}
-
-  useEffect( () => {
-     axios.get("/api/subcribe")
-     .then((response) => {
-      SetDepList([...response.data.departlist]);
-      
-        })
-     .catch((error) => {
-       console.log(error)
-     }); 
- 
-  },[]);
- 
-
-  const depRenderList = depList.map((sinDep,index) => {
- 
-    return(
-   <div key={index} className="p-col-12" onClick={(e) => updateCatery(sinDep)}>
-
-      <div className="product-list-item"> 
-
-      <div className="product-list-detail">
+  return (
+    <div>
+    <div >
+    <div className="HomeStyle" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(./Homepic.jpeg)` }}>
+        <div className="hero-text-box clearfix">
+            <h1>Share Your Career Path</h1>
+            <p>Guide our Junior's to pursue a career that is meaningful and fulfilling</p>
             <br></br>
-
-            <div >
-             
-            <div className="product-name">{sinDep}</div>
-            </div>
-            <br></br>
+            <a className="btn btn-full" href="/share">Share Your's</a>
+            <a className="btn btn-ghost" href="/department">Analyse Other's</a>
         </div>
-
-      </div>
-    
-   </div> 
-    );
-   });
-
-
-  return currentUser ? (
-    <div className="container">
-      <div className="dataview-demo"> 
-          {depRenderList}
-      </div>
-
     </div>
-  ) : (
-    <h1>You are NOT signed in</h1>
+
+</div>
+</div>
   );
 };
 

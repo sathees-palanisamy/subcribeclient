@@ -2,10 +2,11 @@ import Link from 'next/link';
 
 export default ({ currentUser }) => {
   const links = [
+    true && { label: 'Share Yours', href: '/share' },
     !currentUser && { label: 'Sign Up', href: '/auth/signup' },
     !currentUser && { label: 'Sign In', href: '/auth/signin' },
+    currentUser && { label: 'Subcribed Career', href: '/department' },
     currentUser && { label: 'Edit Subcribe', href: '/edit' },
-    currentUser && { label: 'Subcribed Career', href: '/career' },
     currentUser && { label: 'Sign Out', href: '/auth/signout' },
     
    
@@ -14,7 +15,7 @@ export default ({ currentUser }) => {
     .map(({ label, href }) => {
       return (
      
-          <Link href={href}>
+          <Link href={href} key={href}>
             <a className="nav-link">{label}</a>
           </Link>
 

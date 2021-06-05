@@ -139,18 +139,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (({
   currentUser
 }) => {
-  const links = [!currentUser && {
+  const links = [ true && {
+    label: 'Share Yours',
+    href: '/share'
+  }, !currentUser && {
     label: 'Sign Up',
     href: '/auth/signup'
   }, !currentUser && {
     label: 'Sign In',
     href: '/auth/signin'
   }, currentUser && {
+    label: 'Subcribed Career',
+    href: '/department'
+  }, currentUser && {
     label: 'Edit Subcribe',
     href: '/edit'
-  }, currentUser && {
-    label: 'Subcribed Career',
-    href: '/career'
   }, currentUser && {
     label: 'Sign Out',
     href: '/auth/signout'
@@ -160,10 +163,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   }) => {
     return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: href,
+      key: href,
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 11
       }
     }, __jsx("a", {
@@ -171,7 +175,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 13
       }
     }, label));
@@ -181,7 +185,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 26,
       columnNumber: 5
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -189,7 +193,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 7
     }
   }, __jsx("a", {
@@ -197,7 +201,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 9
     }
   }, "Career Subscribe")), links);

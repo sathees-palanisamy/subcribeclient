@@ -155,6 +155,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     label: 'Edit Subcribe',
     href: '/edit'
   }, currentUser && {
+    label: 'Feedback',
+    href: '/suggestion'
+  }, currentUser && {
     label: 'Sign Out',
     href: '/auth/signout'
   }].filter(linkConfig => linkConfig).map(({
@@ -167,7 +170,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 11
       }
     }, __jsx("a", {
@@ -175,7 +178,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 13
       }
     }, label));
@@ -185,7 +188,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 5
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -193,7 +196,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 7
     }
   }, __jsx("a", {
@@ -201,7 +204,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 9
     }
   }, "Career Subscribe")), links);

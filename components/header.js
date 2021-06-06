@@ -7,6 +7,7 @@ export default ({ currentUser }) => {
     !currentUser && { label: 'Sign In', href: '/auth/signin' },
     currentUser && { label: 'Subcribed Career', href: '/department' },
     currentUser && { label: 'Edit Subcribe', href: '/edit' },
+    currentUser && { label: 'Feedback', href: '/suggestion' },
     currentUser && { label: 'Sign Out', href: '/auth/signout' },
     
    

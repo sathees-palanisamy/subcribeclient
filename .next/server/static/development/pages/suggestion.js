@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -144,7 +144,12 @@ const SuggestionPage = props => {
       detail: "",
       date: ""
     };
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/feedback/delete', data).then(response => {
+    const newToken = localStorage.getItem('token');
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/feedback/delete', data, {
+      headers: {
+        Authorization: `Bearer ${newToken}`
+      }
+    }).then(response => {
       displayList();
     }).catch(error => {
       console.log(error);
@@ -157,7 +162,12 @@ const SuggestionPage = props => {
 
   const displayList = event => {
     setUiStatus('list');
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/feedback/list').then(response => {
+    const newToken = localStorage.getItem('token');
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/feedback/list', {
+      headers: {
+        Authorization: `Bearer ${newToken}`
+      }
+    }).then(response => {
       setdataList([...response.data]);
     }).catch(error => {
       console.log(error);
@@ -167,14 +177,19 @@ const SuggestionPage = props => {
   const handleSubmit = event => {
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     let current_datetime = new Date();
-    let formatted_date = current_datetime.getDate() + "-" + months[current_datetime.getMonth()] + "-" + current_datetime.getFullYear() + "." + current_datetime.getTime();
+    let formatted_date = current_datetime.getDate() + "-" + months[current_datetime.getMonth()] + "-" + current_datetime.getFullYear();
     const data = {
       id: "",
       email: email,
       detail: customerDescription,
       date: formatted_date
     };
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/feedback/create', data).then(response => {
+    const newToken = localStorage.getItem('token');
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/feedback/create', data, {
+      headers: {
+        Authorization: `Bearer ${newToken}`
+      }
+    }).then(response => {
       console.log('response.status:', response.status);
 
       if (response.status === 200) {
@@ -196,7 +211,7 @@ const SuggestionPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 102,
       columnNumber: 28
     }
   }, __jsx("a", {
@@ -204,7 +219,7 @@ const SuggestionPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 103,
       columnNumber: 13
     }
   }, __jsx("span", {
@@ -212,7 +227,7 @@ const SuggestionPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 103,
       columnNumber: 25
     }
   }, " ")));
@@ -225,7 +240,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98,
+        lineNumber: 110,
         columnNumber: 26
       }
     }, __jsx("div", {
@@ -233,14 +248,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99,
+        lineNumber: 111,
         columnNumber: 17
       }
     }, __jsx("h2", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101,
+        lineNumber: 113,
         columnNumber: 21
       }
     }, "Suggestion Form"), homePageLink), __jsx("form", {
@@ -248,7 +263,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108,
+        lineNumber: 120,
         columnNumber: 17
       }
     }, __jsx("div", {
@@ -256,7 +271,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109,
+        lineNumber: 121,
         columnNumber: 21
       }
     }, __jsx("div", {
@@ -264,7 +279,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110,
+        lineNumber: 122,
         columnNumber: 25
       }
     }, __jsx("div", {
@@ -272,7 +287,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113,
+        lineNumber: 125,
         columnNumber: 29
       }
     }, __jsx("div", {
@@ -280,14 +295,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114,
+        lineNumber: 126,
         columnNumber: 33
       }
     }, __jsx("label", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115,
+        lineNumber: 127,
         columnNumber: 37
       }
     }, "Email ID")), __jsx("div", {
@@ -295,7 +310,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117,
+        lineNumber: 129,
         columnNumber: 33
       }
     }, __jsx("input", {
@@ -309,7 +324,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 118,
+        lineNumber: 130,
         columnNumber: 37
       }
     }))), __jsx("div", {
@@ -317,7 +332,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122,
+        lineNumber: 134,
         columnNumber: 29
       }
     }, __jsx("div", {
@@ -325,14 +340,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123,
+        lineNumber: 135,
         columnNumber: 33
       }
     }, __jsx("label", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 124,
+        lineNumber: 136,
         columnNumber: 37
       }
     }, "Suggestion Details")), __jsx("div", {
@@ -340,7 +355,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126,
+        lineNumber: 138,
         columnNumber: 33
       }
     }, __jsx("textarea", {
@@ -352,7 +367,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127,
+        lineNumber: 139,
         columnNumber: 37
       }
     }))), __jsx("div", {
@@ -360,7 +375,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130,
+        lineNumber: 142,
         columnNumber: 29
       }
     }, __jsx("div", {
@@ -368,14 +383,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131,
+        lineNumber: 143,
         columnNumber: 33
       }
     }, __jsx("label", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132,
+        lineNumber: 144,
         columnNumber: 37
       }
     }, "\xA0")), __jsx("div", {
@@ -383,7 +398,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134,
+        lineNumber: 146,
         columnNumber: 33
       }
     }, __jsx("input", {
@@ -392,14 +407,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 135,
+        lineNumber: 147,
         columnNumber: 37
       }
     })))))), __jsx("br", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 143,
+        lineNumber: 155,
         columnNumber: 17
       }
     }), __jsx("div", {
@@ -407,28 +422,28 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144,
+        lineNumber: 156,
         columnNumber: 17
       }
     }, __jsx("p", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145,
+        lineNumber: 157,
         columnNumber: 21
       }
     }, uploadStatus)), __jsx("br", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147,
+        lineNumber: 159,
         columnNumber: 17
       }
     }), __jsx("br", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148,
+        lineNumber: 160,
         columnNumber: 17
       }
     }), __jsx("div", {
@@ -436,7 +451,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149,
+        lineNumber: 161,
         columnNumber: 17
       }
     }, __jsx("div", {
@@ -444,14 +459,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150,
+        lineNumber: 162,
         columnNumber: 21
       }
     }, __jsx("label", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151,
+        lineNumber: 163,
         columnNumber: 25
       }
     }, "\xA0")), __jsx("div", {
@@ -459,7 +474,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153,
+        lineNumber: 165,
         columnNumber: 21
       }
     }, __jsx("input", {
@@ -469,7 +484,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 154,
+        lineNumber: 166,
         columnNumber: 25
       }
     }))));
@@ -484,7 +499,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 166,
+        lineNumber: 178,
         columnNumber: 17
       }
     }, __jsx("div", {
@@ -492,7 +507,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 167,
+        lineNumber: 179,
         columnNumber: 21
       }
     }, __jsx("div", {
@@ -500,7 +515,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 168,
+        lineNumber: 180,
         columnNumber: 25
       }
     }), __jsx("div", {
@@ -508,7 +523,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 170,
+        lineNumber: 182,
         columnNumber: 25
       }
     }, __jsx("div", {
@@ -516,14 +531,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 171,
+        lineNumber: 183,
         columnNumber: 29
       }
     }, __jsx("div", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 172,
+        lineNumber: 184,
         columnNumber: 33
       }
     }, __jsx("ul", {
@@ -531,14 +546,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 173,
+        lineNumber: 185,
         columnNumber: 37
       }
     }, __jsx("li", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 174,
+        lineNumber: 186,
         columnNumber: 41
       }
     }, __jsx("p", {
@@ -546,7 +561,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 174,
+        lineNumber: 186,
         columnNumber: 45
       }
     }, indiSuggestion.email)), __jsx("li", {
@@ -555,7 +570,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 175,
+        lineNumber: 187,
         columnNumber: 41
       }
     }, __jsx("i", {
@@ -563,7 +578,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 176,
+        lineNumber: 188,
         columnNumber: 42
       }
     }), "Delete")), __jsx("p", {
@@ -571,7 +586,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 178,
+        lineNumber: 190,
         columnNumber: 37
       }
     }, indiSuggestion.detail)), __jsx("div", {
@@ -579,7 +594,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 180,
+        lineNumber: 192,
         columnNumber: 33
       }
     }, __jsx("ul", {
@@ -587,14 +602,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 181,
+        lineNumber: 193,
         columnNumber: 37
       }
     }, __jsx("li", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182,
+        lineNumber: 194,
         columnNumber: 41
       }
     }, __jsx("i", {
@@ -602,7 +617,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182,
+        lineNumber: 194,
         columnNumber: 45
       }
     }), indiSuggestion.date, " Shared Date"))))), __jsx("div", {
@@ -610,21 +625,21 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 187,
+        lineNumber: 199,
         columnNumber: 25
       }
     })), __jsx("br", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 190,
+        lineNumber: 202,
         columnNumber: 18
       }
     }), __jsx("br", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 191,
+        lineNumber: 203,
         columnNumber: 18
       }
     })));
@@ -633,7 +648,7 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 196,
+        lineNumber: 208,
         columnNumber: 26
       }
     }, __jsx("div", {
@@ -641,14 +656,14 @@ const SuggestionPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197,
+        lineNumber: 209,
         columnNumber: 17
       }
     }, __jsx("h2", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 199,
+        lineNumber: 211,
         columnNumber: 21
       }
     }, "Suggestion List"), homePageLink), suggestionListPage);
@@ -658,7 +673,7 @@ const SuggestionPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213,
+      lineNumber: 225,
       columnNumber: 13
     }
   }, renderList);
@@ -668,7 +683,7 @@ const SuggestionPage = props => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 10:
 /*!***********************************!*\
   !*** multi ./pages/suggestion.js ***!
   \***********************************/

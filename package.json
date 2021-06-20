@@ -13,6 +13,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "cookie": "^0.4.1",
+    "js-cookie": "^2.2.1",
     "next": "^9.3.4",
     "primereact": "^6.3.2",
     "react": "^16.13.1",

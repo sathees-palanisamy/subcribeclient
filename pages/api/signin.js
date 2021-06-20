@@ -18,6 +18,8 @@ async function handler(req, res) {
       const remFirstp = initParse.replace(/^express:sess=/, "");
       const remlastp = remFirstp.split("; path=/;");
 
+      console.log("remlastp[0]:", remlastp[0])
+
       res.setHeader(
         "Set-Cookie",
         serialize("express:sess", remlastp[0], { path: "/" })

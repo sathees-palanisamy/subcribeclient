@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
+import Cookies from 'js-cookie';
 
 export default () => {
   const [email, setEmail] = useState("");
@@ -16,10 +17,22 @@ export default () => {
         password: password,
       });
 
-      console.log("id:" + { ...response });
+      console.log("cookie:" + Cookies.get('express:sess'));
+
+      let newtoken = atob(Cookies.get('express:sess'));
+
+      let strfyData = "'"+ newtoken + "'";
+
+      const strSpl = strfyData.split(":");
+      const strSpl2 = strSpl[1].split("}");
+      const strSpl3 = strSpl2[0].split('"');
+
+      localStorage.setItem('token', strSpl3[1]);
+
+
       router.push("/");
     } catch (err) {
-      console.log('err.response.data[0].message:' + err.response.data[0].message);
+      console.log('err:' + err);
 
       // for(let i=0; i< err.message.length;i++) {
       //     console.log('err.message:' + err.message[i]);

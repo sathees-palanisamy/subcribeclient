@@ -16,20 +16,21 @@ async function handler(req, res) {
     
     /* axios details */
 
-    try {
-      const response = await axios.post(
-        "http://localhost:8000/v1/feedback/deleteFeedback",
-        {
-            "id" : inputId,
-          "email" : inputEmail,
-          "detail" : inputDetail,
-          "date" : inputDate
-        },
+    const cookieExt = req.headers['authorization'];
+    console.log('cookieExt:' + cookieExt);
+    const remlastp = cookieExt.split("Bearer ");
+    console.log('remlastp[1]:' + remlastp[1]);
+    const cookie = remlastp[1];
+    console.log('cookie:' + cookie);
 
-        {headers: {
-          'Content-Type': 'application/json',
-           Accept: 'application/json'
-      }
+    try {
+      const response = await axios.delete(
+        "http://localhost:8000/v1/deleteFeedback/" + inputId ,
+        { headers: {
+          "Content-Type": "application/json",
+          // Cookie: `token=${cookie};`,
+          Authorization: `Bearer ${cookie}`
+         }
         
         }
       );

@@ -22,7 +22,13 @@ const SuggestionPage = (props) => {
             date: "",
         };
 
-        axios.post('/api/feedback/delete', data)
+        const newToken = localStorage.getItem('token');
+
+
+        axios.post('/api/feedback/delete', data,
+        {  
+            headers: {Authorization: `Bearer ${newToken}`} }
+        )
             .then(response => {
                 displayList();
             })
@@ -40,7 +46,10 @@ const SuggestionPage = (props) => {
     const displayList = (event) => {
         setUiStatus('list');
 
-        axios.get('/api/feedback/list')
+        const newToken = localStorage.getItem('token');
+
+
+        axios.get('/api/feedback/list', { headers: {Authorization: `Bearer ${newToken}`}})
         .then(response => {
             setdataList([...response.data]);
         })
@@ -55,7 +64,7 @@ const SuggestionPage = (props) => {
         const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         let current_datetime = new Date();
 
-        let formatted_date = current_datetime.getDate() + "-" + months[current_datetime.getMonth()] + "-" + current_datetime.getFullYear() + "." + current_datetime.getTime();
+        let formatted_date = current_datetime.getDate() + "-" + months[current_datetime.getMonth()] + "-" + current_datetime.getFullYear();
 
         const data = {
             id : "",
@@ -64,8 +73,11 @@ const SuggestionPage = (props) => {
             date: formatted_date,
         };
 
+        const newToken = localStorage.getItem('token');
 
-        axios.post('/api/feedback/create', data)
+        axios.post('/api/feedback/create', data, {  
+            headers: {Authorization: `Bearer ${newToken}`}
+        })
             .then(response => {
        
                 console.log('response.status:',response.status);

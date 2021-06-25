@@ -1,310 +1,103 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/auth/signout.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/career.js"],{
 
-/***/ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./api/build-client.js":
+/*!*****************************!*\
+  !*** ./api/build-client.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
-module.exports = _arrayWithHoles;
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var req = _ref.req;
+
+  if (false) {} else {
+    // We must be on the browser
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
+      baseUrl: '/'
+    });
+  }
+});
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/construct.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/construct.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-function isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-function _construct(Parent, args, Class) {
-  if (isNativeReflectConstruct()) {
-    module.exports = _construct = Reflect.construct;
-  } else {
-    module.exports = _construct = function _construct(Parent, args, Class) {
-      var a = [null];
-      a.push.apply(a, args);
-      var Constructor = Function.bind.apply(Parent, a);
-      var instance = new Constructor();
-      if (Class) setPrototypeOf(instance, Class.prototype);
-      return instance;
-    };
-  }
-
-  return _construct.apply(null, arguments);
-}
-
-module.exports = _construct;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/createClass.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
 /*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
-
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
-}
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
-    return {
-      "default": obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithoutHoles; });
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
     }
+
+    return arr2;
   }
-
-  newObj["default"] = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
 }
-
-module.exports = _interopRequireWildcard;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
-
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArray; });
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
 }
-
-module.exports = _iterableToArrayLimit;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/nonIterableRest.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/nonIterableRest.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableSpread; });
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
 }
-
-module.exports = _nonIterableRest;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _toConsumableArray; });
+/* harmony import */ var _arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
+/* harmony import */ var _iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
+/* harmony import */ var _nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js");
 
-  return _setPrototypeOf(o, p);
+
+
+function _toConsumableArray(arr) {
+  return Object(_arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_iterableToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || Object(_nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }
-
-module.exports = _setPrototypeOf;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/slicedToArray.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles */ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js");
-
-var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit */ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
-
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest */ "./node_modules/@babel/runtime/helpers/nonIterableRest.js");
-
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
-}
-
-module.exports = _slicedToArray;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
 
 /***/ }),
 
@@ -2133,1432 +1926,26 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/native-url/dist/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/native-url/dist/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js"))&&"object"==typeof e&&"default"in e?e.default:e,r=/https?|ftp|gopher|file/;function o(e){"string"==typeof e&&(e=f(e));var o=function(e,t,r){var o=e.auth,a=e.hostname,s=e.protocol||"",h=e.pathname||"",c=e.hash||"",p=e.query||"",n=!1;o=o?encodeURIComponent(o).replace(/%3A/i,":")+"@":"",e.host?n=o+e.host:a&&(n=o+(~a.indexOf(":")?"["+a+"]":a),e.port&&(n+=":"+e.port)),p&&"object"==typeof p&&(p=t.encode(p));var l=e.search||p&&"?"+p||"";return s&&":"!==s.substr(-1)&&(s+=":"),e.slashes||(!s||r.test(s))&&!1!==n?(n="//"+(n||""),h&&"/"!==h[0]&&(h="/"+h)):n||(n=""),c&&"#"!==c[0]&&(c="#"+c),l&&"?"!==l[0]&&(l="?"+l),{protocol:s,host:n,pathname:h=h.replace(/[?#]/g,encodeURIComponent),search:l=l.replace("#","%23"),hash:c}}(e,t,r);return""+o.protocol+o.host+o.pathname+o.search+o.hash}var a="http://",s="w.w",h=a+s,c=/^https?|ftp|gopher|file/,p=/^(.*?)([#?].*)/,n=/^([a-z0-9.+-]*:)(\/{0,3})(.*)/i,l=/^([a-z0-9.+-]*:)?\/\/\/*/i,i=/^([a-z0-9.+-]*:)(\/{0,2})\[(.*)\]$/i;function u(e){try{return decodeURI(e)}catch(t){return e}}function f(e,r,a){void 0===r&&(r=!1),void 0===a&&(a=!1);var f=(e=e.trim()).match(p);e=f?u(f[1]).replace(/\\/g,"/")+f[2]:u(e).replace(/\\/g,"/"),i.test(e)&&"/"!==e.slice(-1)&&(e+="/");var m=!/(^javascript)/.test(e)&&e.match(n),v=l.test(e),d="";m&&(c.test(m[1])||(d=m[1].toLowerCase(),e=""+m[2]+m[3]),m[2]||(v=!1,c.test(m[1])?(d=m[1],e=""+m[3]):e="//"+m[3]),3!==m[2].length&&1!==m[2].length||(d=m[1],e="/"+m[3]));var g,b=e.match(/(:[0-9]+)/),y="";b&&b[1]&&3===b[1].length&&(e=e.replace(y=b[1],y+"00"));var w={},x="",R="";try{g=new URL(e)}catch(t){x=t,d||a||!/^\/\//.test(e)||/^\/\/.+[@.]/.test(e)||(R="/",e=e.substr(1));try{g=new URL(e,h)}catch(e){return w.protocol=d,w.href=d,w}}w.slashes=v&&!R,w.host=g.host===s?"":g.host,w.hostname=g.hostname===s?"":g.hostname.replace(/(\[|\])/g,""),w.protocol=x?d||null:g.protocol,w.search=g.search.replace(/\\/g,"%5C"),w.hash=g.hash.replace(/\\/g,"%5C");var U=e.split("#");!w.search&&~U[0].indexOf("?")&&(w.search="?"),w.hash||""!==U[1]||(w.hash="#"),w.query=r?t.decode(g.search.substr(1)):w.search.substr(1),w.pathname=R+u(g.pathname).replace(/"/g,"%22"),"about:"===w.protocol&&"blank"===w.pathname&&(w.protocol="",w.pathname=""),x&&"/"!==e[0]&&(w.pathname=w.pathname.substr(1)),d&&!c.test(d)&&"/"!==e.slice(-1)&&"/"===w.pathname&&(w.pathname=""),w.path=w.pathname+w.search,w.auth=[g.username,g.password].map(decodeURIComponent).filter(Boolean).join(":"),w.port=g.port,y&&(w.host=w.host.replace(y+"00",y),w.port=w.port.slice(0,-2)),w.href=R?""+w.pathname+w.search+w.hash:o(w);var j=/^(file)/.test(w.href)?["host","hostname"]:[];return Object.keys(w).forEach(function(e){~j.indexOf(e)||(w[e]=w[e]||null)}),w}var m=/^([a-z0-9.+-]*:\/\/\/)([a-z0-9.+-]:\/*)?/i,v=/https?|ftp|gopher|file/;function d(e,t){var r="string"==typeof e?f(e):e;e="object"==typeof e?o(e):e;var s=f(t),c="";r.protocol&&!r.slashes&&(c=r.protocol,e=e.replace(r.protocol,""),c+="/"===t[0]||"/"===e[0]?"/":""),c&&s.protocol&&(c="",s.slashes||(c=s.protocol,t=t.replace(s.protocol,"")));var p=e.match(m);p&&!s.protocol&&(e=e.substr((c=p[1]+(p[2]||"")).length),/^\/\/[^\/]/.test(t)&&(c=c.slice(0,-1)));var n=new URL(e,h+"/"),l=new URL(t,n).toString().replace(h,""),i=s.protocol||r.protocol;return i+=r.slashes||s.slashes?"//":"",!c&&i?l=l.replace(a,i):c&&(l=l.replace(a,"")),v.test(l)||~t.indexOf(".")||"/"===e.slice(-1)||"/"===t.slice(-1)||"/"!==l.slice(-1)||(l=l.slice(0,-1)),c&&(l=c+("/"===l[0]?l.substr(1):l)),l}exports.parse=f,exports.format=o,exports.resolve=d,exports.resolveObject=function(e,t){return f(d(e,t))};
-//# sourceMappingURL=index.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fauth%2Fsignout&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fauth%2Fsignout.js!./":
-/*!***************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fauth%2Fsignout&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fauth%2Fsignout.js ***!
-  \***************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcareer&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fcareer.js!./":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcareer&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fcareer.js ***!
+  \***********************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/auth/signout", function() {
-      var mod = __webpack_require__(/*! ./pages/auth/signout.js */ "./pages/auth/signout.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/career", function() {
+      var mod = __webpack_require__(/*! ./pages/career.js */ "./pages/career.js")
       if(true) {
-        module.hot.accept(/*! ./pages/auth/signout.js */ "./pages/auth/signout.js", function() {
-          if(!next.router.components["/auth/signout"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/auth/signout.js */ "./pages/auth/signout.js")
-          next.router.update("/auth/signout", updatedPage)
+        module.hot.accept(/*! ./pages/career.js */ "./pages/career.js", function() {
+          if(!next.router.components["/career"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/career.js */ "./pages/career.js")
+          next.router.update("/career", updatedPage)
         })
       }
       return mod
     }]);
   
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/client/router.js":
-/*!*************************************************!*\
-  !*** ./node_modules/next/dist/client/router.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _construct = __webpack_require__(/*! @babel/runtime/helpers/construct */ "./node_modules/@babel/runtime/helpers/construct.js");
-
-function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports.useRouter = useRouter;
-exports.makePublicRouterInstance = makePublicRouterInstance;
-exports.createRouter = exports.withRouter = exports["default"] = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _router2 = _interopRequireWildcard(__webpack_require__(/*! ../next-server/lib/router/router */ "./node_modules/next/dist/next-server/lib/router/router.js"));
-
-exports.Router = _router2["default"];
-exports.NextRouter = _router2.NextRouter;
-
-var _routerContext = __webpack_require__(/*! ../next-server/lib/router-context */ "./node_modules/next/dist/next-server/lib/router-context.js");
-
-var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules/next/dist/client/with-router.js"));
-
-exports.withRouter = _withRouter["default"];
-/* global window */
-
-var singletonRouter = {
-  router: null,
-  // holds the actual router instance
-  readyCallbacks: [],
-  ready: function ready(cb) {
-    if (this.router) return cb();
-
-    if (true) {
-      this.readyCallbacks.push(cb);
-    }
-  }
-}; // Create public properties and methods of the router in the singletonRouter
-
-var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components', 'isFallback'];
-var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
-var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
-
-Object.defineProperty(singletonRouter, 'events', {
-  get: function get() {
-    return _router2["default"].events;
-  }
-});
-urlPropertyFields.forEach(function (field) {
-  // Here we need to use Object.defineProperty because, we need to return
-  // the property assigned to the actual router
-  // The value might get changed as we change routes and this is the
-  // proper way to access it
-  Object.defineProperty(singletonRouter, field, {
-    get: function get() {
-      var router = getRouter();
-      return router[field];
-    }
-  });
-});
-coreMethodFields.forEach(function (field) {
-  // We don't really know the types here, so we add them later instead
-  ;
-
-  singletonRouter[field] = function () {
-    var router = getRouter();
-    return router[field].apply(router, arguments);
-  };
-});
-routerEvents.forEach(function (event) {
-  singletonRouter.ready(function () {
-    _router2["default"].events.on(event, function () {
-      var eventField = "on" + event.charAt(0).toUpperCase() + event.substring(1);
-      var _singletonRouter = singletonRouter;
-
-      if (_singletonRouter[eventField]) {
-        try {
-          _singletonRouter[eventField].apply(_singletonRouter, arguments);
-        } catch (err) {
-          // tslint:disable-next-line:no-console
-          console.error("Error when running the Router event: " + eventField); // tslint:disable-next-line:no-console
-
-          console.error(err.message + "\n" + err.stack);
-        }
-      }
-    });
-  });
-});
-
-function getRouter() {
-  if (!singletonRouter.router) {
-    var message = 'No router instance found.\n' + 'You should only use "next/router" inside the client side of your app.\n';
-    throw new Error(message);
-  }
-
-  return singletonRouter.router;
-} // Export the singletonRouter and this is the public API.
-
-
-var _default = singletonRouter; // Reexport the withRoute HOC
-
-exports["default"] = _default;
-
-function useRouter() {
-  return _react["default"].useContext(_routerContext.RouterContext);
-} // INTERNAL APIS
-// -------------
-// (do not use following exports inside the app)
-// Create a router and assign it as the singleton instance.
-// This is used in client side when we are initilizing the app.
-// This should **not** use inside the server.
-
-
-var createRouter = function createRouter() {
-  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
-
-  singletonRouter.router = _construct(_router2["default"], args);
-  singletonRouter.readyCallbacks.forEach(function (cb) {
-    return cb();
-  });
-  singletonRouter.readyCallbacks = [];
-  return singletonRouter.router;
-}; // This function is used to create the `withRouter` router instance
-
-
-exports.createRouter = createRouter;
-
-function makePublicRouterInstance(router) {
-  var _router = router;
-  var instance = {};
-
-  var _iterator = _createForOfIteratorHelper(urlPropertyFields),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var property = _step.value;
-
-      if (typeof _router[property] === 'object') {
-        instance[property] = Object.assign({}, _router[property]); // makes sure query is not stateful
-
-        continue;
-      }
-
-      instance[property] = _router[property];
-    } // Events is a static property on the router, the router doesn't have to be initialized to use it
-
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-
-  instance.events = _router2["default"].events;
-  coreMethodFields.forEach(function (field) {
-    instance[field] = function () {
-      return _router[field].apply(_router, arguments);
-    };
-  });
-  return instance;
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/client/with-router.js":
-/*!******************************************************!*\
-  !*** ./node_modules/next/dist/client/with-router.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports["default"] = withRouter;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _router = __webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js");
-
-function withRouter(ComposedComponent) {
-  function WithRouterWrapper(props) {
-    return _react["default"].createElement(ComposedComponent, Object.assign({
-      router: (0, _router.useRouter)()
-    }, props));
-  }
-
-  WithRouterWrapper.getInitialProps = ComposedComponent.getInitialProps // This is needed to allow checking for custom getInitialProps in _app
-  ;
-  WithRouterWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
-
-  if (true) {
-    var name = ComposedComponent.displayName || ComposedComponent.name || 'Unknown';
-    WithRouterWrapper.displayName = "withRouter(" + name + ")";
-  }
-
-  return WithRouterWrapper;
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/mitt.js":
-/*!********************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/mitt.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
-MIT License
-
-Copyright (c) Jason Miller (https://jasonformat.com/)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function mitt() {
-  var all = Object.create(null);
-  return {
-    on: function on(type, handler) {
-      ;
-      (all[type] || (all[type] = [])).push(handler);
-    },
-    off: function off(type, handler) {
-      if (all[type]) {
-        // tslint:disable-next-line:no-bitwise
-        all[type].splice(all[type].indexOf(handler) >>> 0, 1);
-      }
-    },
-    emit: function emit(type) {
-      for (var _len = arguments.length, evts = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        evts[_key - 1] = arguments[_key];
-      }
-
-      // eslint-disable-next-line array-callback-return
-      ;
-      (all[type] || []).slice().map(function (handler) {
-        handler.apply(void 0, evts);
-      });
-    }
-  };
-}
-
-exports["default"] = mitt;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router-context.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router-context.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) {
-    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  }
-  result["default"] = mod;
-  return result;
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-exports.RouterContext = React.createContext(null);
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/router.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/router.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-
-var _slicedToArray = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-
-var _classCallCheck = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-
-var _createClass = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var url_1 = __webpack_require__(/*! url */ "./node_modules/native-url/dist/index.js");
-
-var mitt_1 = __importDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next/dist/next-server/lib/mitt.js"));
-
-var utils_1 = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/next-server/lib/utils.js");
-
-var is_dynamic_1 = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js");
-
-var route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js");
-
-var route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
-
-function addBasePath(path) {
-  // variable is always a string
-  var p = "";
-  return path.indexOf(p) !== 0 ? p + path : path;
-}
-
-function toRoute(path) {
-  return path.replace(/\/$/, '') || '/';
-}
-
-var prepareRoute = function prepareRoute(path) {
-  return toRoute(!path || path === '/' ? '/index' : path);
-};
-
-function fetchNextData(pathname, query, isServerRender, cb) {
-  var attempts = isServerRender ? 3 : 1;
-
-  function getResponse() {
-    return fetch(utils_1.formatWithValidation({
-      // @ts-ignore __NEXT_DATA__
-      pathname: "/_next/data/".concat(__NEXT_DATA__.buildId).concat(pathname, ".json"),
-      query: query
-    }), {
-      // Cookies are required to be present for Next.js' SSG "Preview Mode".
-      // Cookies may also be required for `getServerSideProps`.
-      //
-      // > `fetch` won’t send cookies, unless you set the credentials init
-      // > option.
-      // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-      //
-      // > For maximum browser compatibility when it comes to sending &
-      // > receiving cookies, always supply the `credentials: 'same-origin'`
-      // > option instead of relying on the default.
-      // https://github.com/github/fetch#caveats
-      credentials: 'same-origin'
-    }).then(function (res) {
-      if (!res.ok) {
-        if (--attempts > 0 && res.status >= 500) {
-          return getResponse();
-        }
-
-        throw new Error("Failed to load static props");
-      }
-
-      return res.json();
-    });
-  }
-
-  return getResponse().then(function (data) {
-    return cb ? cb(data) : data;
-  })["catch"](function (err) {
-    // We should only trigger a server-side transition if this was caused
-    // on a client-side transition. Otherwise, we'd get into an infinite
-    // loop.
-    if (!isServerRender) {
-      ;
-      err.code = 'PAGE_LOAD_ERROR';
-    }
-
-    throw err;
-  });
-}
-
-var Router = /*#__PURE__*/function () {
-  function Router(pathname, query, as, _ref) {
-    var _this = this;
-
-    var initialProps = _ref.initialProps,
-        pageLoader = _ref.pageLoader,
-        App = _ref.App,
-        wrapApp = _ref.wrapApp,
-        Component = _ref.Component,
-        err = _ref.err,
-        subscription = _ref.subscription,
-        isFallback = _ref.isFallback;
-
-    _classCallCheck(this, Router);
-
-    // Static Data Cache
-    this.sdc = {};
-
-    this.onPopState = function (e) {
-      if (!e.state) {
-        // We get state as undefined for two reasons.
-        //  1. With older safari (< 8) and older chrome (< 34)
-        //  2. When the URL changed with #
-        //
-        // In the both cases, we don't need to proceed and change the route.
-        // (as it's already changed)
-        // But we can simply replace the state with the new changes.
-        // Actually, for (1) we don't need to nothing. But it's hard to detect that event.
-        // So, doing the following for (1) does no harm.
-        var _pathname = _this.pathname,
-            _query = _this.query;
-
-        _this.changeState('replaceState', utils_1.formatWithValidation({
-          pathname: _pathname,
-          query: _query
-        }), utils_1.getURL());
-
-        return;
-      } // Make sure we don't re-render on initial load,
-      // can be caused by navigating back from an external site
-
-
-      if (e.state && _this.isSsr && e.state.as === _this.asPath && url_1.parse(e.state.url).pathname === _this.pathname) {
-        return;
-      } // If the downstream application returns falsy, return.
-      // They will then be responsible for handling the event.
-
-
-      if (_this._bps && !_this._bps(e.state)) {
-        return;
-      }
-
-      var _e$state = e.state,
-          url = _e$state.url,
-          as = _e$state.as,
-          options = _e$state.options;
-
-      if (true) {
-        if (typeof url === 'undefined' || typeof as === 'undefined') {
-          console.warn('`popstate` event triggered but `event.state` did not have `url` or `as` https://err.sh/zeit/next.js/popstate-state-empty');
-        }
-      }
-
-      _this.replace(url, as, options);
-    };
-
-    this._getStaticData = function (asPath) {
-      var pathname = prepareRoute(url_1.parse(asPath).pathname);
-      return  false ? undefined : fetchNextData(pathname, null, _this.isSsr, function (data) {
-        return _this.sdc[pathname] = data;
-      });
-    };
-
-    this._getServerData = function (asPath) {
-      var _url_1$parse = url_1.parse(asPath, true),
-          pathname = _url_1$parse.pathname,
-          query = _url_1$parse.query;
-
-      pathname = prepareRoute(pathname);
-      return fetchNextData(pathname, query, _this.isSsr);
-    }; // represents the current component key
-
-
-    this.route = toRoute(pathname); // set up the component cache (by route keys)
-
-    this.components = {}; // We should not keep the cache, if there's an error
-    // Otherwise, this cause issues when when going back and
-    // come again to the errored page.
-
-    if (pathname !== '/_error') {
-      this.components[this.route] = {
-        Component: Component,
-        props: initialProps,
-        err: err,
-        __N_SSG: initialProps && initialProps.__N_SSG,
-        __N_SSP: initialProps && initialProps.__N_SSP
-      };
-    }
-
-    this.components['/_app'] = {
-      Component: App
-    }; // Backwards compat for Router.router.events
-    // TODO: Should be remove the following major version as it was never documented
-
-    this.events = Router.events;
-    this.pageLoader = pageLoader;
-    this.pathname = pathname;
-    this.query = query; // if auto prerendered and dynamic route wait to update asPath
-    // until after mount to prevent hydration mismatch
-
-    this.asPath = // @ts-ignore this is temporarily global (attached to window)
-    is_dynamic_1.isDynamicRoute(pathname) && __NEXT_DATA__.autoExport ? pathname : as;
-    this.sub = subscription;
-    this.clc = null;
-    this._wrapApp = wrapApp; // make sure to ignore extra popState in safari on navigating
-    // back from external site
-
-    this.isSsr = true;
-    this.isFallback = isFallback;
-
-    if (true) {
-      // in order for `e.state` to work on the `onpopstate` event
-      // we have to register the initial route upon initialization
-      this.changeState('replaceState', utils_1.formatWithValidation({
-        pathname: pathname,
-        query: query
-      }), as);
-      window.addEventListener('popstate', this.onPopState);
-    }
-  } // @deprecated backwards compatibility even though it's a private method.
-
-
-  _createClass(Router, [{
-    key: "update",
-    value: function update(route, mod) {
-      var Component = mod["default"] || mod;
-      var data = this.components[route];
-
-      if (!data) {
-        throw new Error("Cannot update unavailable route: ".concat(route));
-      }
-
-      var newData = Object.assign(Object.assign({}, data), {
-        Component: Component,
-        __N_SSG: mod.__N_SSG,
-        __N_SSP: mod.__N_SSP
-      });
-      this.components[route] = newData; // pages/_app.js updated
-
-      if (route === '/_app') {
-        this.notify(this.components[this.route]);
-        return;
-      }
-
-      if (route === this.route) {
-        this.notify(newData);
-      }
-    }
-  }, {
-    key: "reload",
-    value: function reload() {
-      window.location.reload();
-    }
-    /**
-     * Go back in history
-     */
-
-  }, {
-    key: "back",
-    value: function back() {
-      window.history.back();
-    }
-    /**
-     * Performs a `pushState` with arguments
-     * @param url of the route
-     * @param as masks `url` for the browser
-     * @param options object you can define `shallow` and other options
-     */
-
-  }, {
-    key: "push",
-    value: function push(url) {
-      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.change('pushState', url, as, options);
-    }
-    /**
-     * Performs a `replaceState` with arguments
-     * @param url of the route
-     * @param as masks `url` for the browser
-     * @param options object you can define `shallow` and other options
-     */
-
-  }, {
-    key: "replace",
-    value: function replace(url) {
-      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.change('replaceState', url, as, options);
-    }
-  }, {
-    key: "change",
-    value: function change(method, _url, _as, options) {
-      var _this2 = this;
-
-      return new Promise(function (resolve, reject) {
-        if (!options._h) {
-          _this2.isSsr = false;
-        } // marking route changes as a navigation start entry
-
-
-        if (utils_1.ST) {
-          performance.mark('routeChange');
-        } // If url and as provided as an object representation,
-        // we'll format them into the string version here.
-
-
-        var url = typeof _url === 'object' ? utils_1.formatWithValidation(_url) : _url;
-        var as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as; // Add the ending slash to the paths. So, we can serve the
-        // "<page>/index.html" directly for the SSR page.
-
-        if (false) { var rewriteUrlForNextExport; }
-
-        _this2.abortComponentLoad(as); // If the url change is only related to a hash change
-        // We should not proceed. We should only change the state.
-        // WARNING: `_h` is an internal option for handing Next.js client-side
-        // hydration. Your app should _never_ use this property. It may change at
-        // any time without notice.
-
-
-        if (!options._h && _this2.onlyAHashChange(as)) {
-          _this2.asPath = as;
-          Router.events.emit('hashChangeStart', as);
-
-          _this2.changeState(method, url, addBasePath(as), options);
-
-          _this2.scrollToHash(as);
-
-          Router.events.emit('hashChangeComplete', as);
-          return resolve(true);
-        }
-
-        var _url_1$parse2 = url_1.parse(url, true),
-            pathname = _url_1$parse2.pathname,
-            query = _url_1$parse2.query,
-            protocol = _url_1$parse2.protocol;
-
-        if (!pathname || protocol) {
-          if (true) {
-            throw new Error("Invalid href passed to router: ".concat(url, " https://err.sh/zeit/next.js/invalid-href-passed"));
-          }
-
-          return resolve(false);
-        } // If asked to change the current URL we should reload the current page
-        // (not location.reload() but reload getInitialProps and other Next.js stuffs)
-        // We also need to set the method = replaceState always
-        // as this should not go into the history (That's how browsers work)
-        // We should compare the new asPath to the current asPath, not the url
-
-
-        if (!_this2.urlIsNew(as)) {
-          method = 'replaceState';
-        }
-
-        var route = toRoute(pathname);
-        var _options$shallow = options.shallow,
-            shallow = _options$shallow === void 0 ? false : _options$shallow;
-
-        if (is_dynamic_1.isDynamicRoute(route)) {
-          var _url_1$parse3 = url_1.parse(as),
-              asPathname = _url_1$parse3.pathname;
-
-          var routeRegex = route_regex_1.getRouteRegex(route);
-          var routeMatch = route_matcher_1.getRouteMatcher(routeRegex)(asPathname);
-
-          if (!routeMatch) {
-            var missingParams = Object.keys(routeRegex.groups).filter(function (param) {
-              return !query[param];
-            });
-
-            if (missingParams.length > 0) {
-              if (true) {
-                console.warn("Mismatching `as` and `href` failed to manually provide " + "the params: ".concat(missingParams.join(', '), " in the `href`'s `query`"));
-              }
-
-              return reject(new Error("The provided `as` value (".concat(asPathname, ") is incompatible with the `href` value (").concat(route, "). ") + "Read more: https://err.sh/zeit/next.js/incompatible-href-as"));
-            }
-          } else {
-            // Merge params into `query`, overwriting any specified in search
-            Object.assign(query, routeMatch);
-          }
-        }
-
-        Router.events.emit('routeChangeStart', as); // If shallow is true and the route exists in the router cache we reuse the previous result
-
-        _this2.getRouteInfo(route, pathname, query, as, shallow).then(function (routeInfo) {
-          var error = routeInfo.error;
-
-          if (error && error.cancelled) {
-            return resolve(false);
-          }
-
-          Router.events.emit('beforeHistoryChange', as);
-
-          _this2.changeState(method, url, addBasePath(as), options);
-
-          if (true) {
-            var appComp = _this2.components['/_app'].Component;
-            window.next.isPrerendered = appComp.getInitialProps === appComp.origGetInitialProps && !routeInfo.Component.getInitialProps;
-          }
-
-          _this2.set(route, pathname, query, as, routeInfo);
-
-          if (error) {
-            Router.events.emit('routeChangeError', error, as);
-            throw error;
-          }
-
-          Router.events.emit('routeChangeComplete', as);
-          return resolve(true);
-        }, reject);
-      });
-    }
-  }, {
-    key: "changeState",
-    value: function changeState(method, url, as) {
-      var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-
-      if (true) {
-        if (typeof window.history === 'undefined') {
-          console.error("Warning: window.history is not available.");
-          return;
-        }
-
-        if (typeof window.history[method] === 'undefined') {
-          console.error("Warning: window.history.".concat(method, " is not available"));
-          return;
-        }
-      }
-
-      if (method !== 'pushState' || utils_1.getURL() !== as) {
-        window.history[method]({
-          url: url,
-          as: as,
-          options: options
-        }, // Most browsers currently ignores this parameter, although they may use it in the future.
-        // Passing the empty string here should be safe against future changes to the method.
-        // https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
-        '', as);
-      }
-    }
-  }, {
-    key: "getRouteInfo",
-    value: function getRouteInfo(route, pathname, query, as) {
-      var _this3 = this;
-
-      var shallow = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
-      var cachedRouteInfo = this.components[route]; // If there is a shallow route transition possible
-      // If the route is already rendered on the screen.
-
-      if (shallow && cachedRouteInfo && this.route === route) {
-        return Promise.resolve(cachedRouteInfo);
-      }
-
-      var handleError = function handleError(err, loadErrorFail) {
-        return new Promise(function (resolve) {
-          if (err.code === 'PAGE_LOAD_ERROR' || loadErrorFail) {
-            // If we can't load the page it could be one of following reasons
-            //  1. Page doesn't exists
-            //  2. Page does exist in a different zone
-            //  3. Internal error while loading the page
-            // So, doing a hard reload is the proper way to deal with this.
-            window.location.href = as; // Changing the URL doesn't block executing the current code path.
-            // So, we need to mark it as a cancelled error and stop the routing logic.
-
-            err.cancelled = true; // @ts-ignore TODO: fix the control flow here
-
-            return resolve({
-              error: err
-            });
-          }
-
-          if (err.cancelled) {
-            // @ts-ignore TODO: fix the control flow here
-            return resolve({
-              error: err
-            });
-          }
-
-          resolve(_this3.fetchComponent('/_error').then(function (res) {
-            var Component = res.page;
-            var routeInfo = {
-              Component: Component,
-              err: err
-            };
-            return new Promise(function (resolve) {
-              _this3.getInitialProps(Component, {
-                err: err,
-                pathname: pathname,
-                query: query
-              }).then(function (props) {
-                routeInfo.props = props;
-                routeInfo.error = err;
-                resolve(routeInfo);
-              }, function (gipErr) {
-                console.error('Error in error page `getInitialProps`: ', gipErr);
-                routeInfo.error = err;
-                routeInfo.props = {};
-                resolve(routeInfo);
-              });
-            });
-          })["catch"](function (err) {
-            return handleError(err, true);
-          }));
-        });
-      };
-
-      return new Promise(function (resolve, reject) {
-        if (cachedRouteInfo) {
-          return resolve(cachedRouteInfo);
-        }
-
-        _this3.fetchComponent(route).then(function (res) {
-          return resolve({
-            Component: res.page,
-            __N_SSG: res.mod.__N_SSG,
-            __N_SSP: res.mod.__N_SSP
-          });
-        }, reject);
-      }).then(function (routeInfo) {
-        var Component = routeInfo.Component,
-            __N_SSG = routeInfo.__N_SSG,
-            __N_SSP = routeInfo.__N_SSP;
-
-        if (true) {
-          var _require = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js"),
-              isValidElementType = _require.isValidElementType;
-
-          if (!isValidElementType(Component)) {
-            throw new Error("The default export is not a React Component in page: \"".concat(pathname, "\""));
-          }
-        }
-
-        return _this3._getData(function () {
-          return __N_SSG ? _this3._getStaticData(as) : __N_SSP ? _this3._getServerData(as) : _this3.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
-          {
-            pathname: pathname,
-            query: query,
-            asPath: as
-          });
-        }).then(function (props) {
-          routeInfo.props = props;
-          _this3.components[route] = routeInfo;
-          return routeInfo;
-        });
-      })["catch"](handleError);
-    }
-  }, {
-    key: "set",
-    value: function set(route, pathname, query, as, data) {
-      this.isFallback = false;
-      this.route = route;
-      this.pathname = pathname;
-      this.query = query;
-      this.asPath = as;
-      this.notify(data);
-    }
-    /**
-     * Callback to execute before replacing router state
-     * @param cb callback to be executed
-     */
-
-  }, {
-    key: "beforePopState",
-    value: function beforePopState(cb) {
-      this._bps = cb;
-    }
-  }, {
-    key: "onlyAHashChange",
-    value: function onlyAHashChange(as) {
-      if (!this.asPath) return false;
-
-      var _this$asPath$split = this.asPath.split('#'),
-          _this$asPath$split2 = _slicedToArray(_this$asPath$split, 2),
-          oldUrlNoHash = _this$asPath$split2[0],
-          oldHash = _this$asPath$split2[1];
-
-      var _as$split = as.split('#'),
-          _as$split2 = _slicedToArray(_as$split, 2),
-          newUrlNoHash = _as$split2[0],
-          newHash = _as$split2[1]; // Makes sure we scroll to the provided hash if the url/hash are the same
-
-
-      if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) {
-        return true;
-      } // If the urls are change, there's more than a hash change
-
-
-      if (oldUrlNoHash !== newUrlNoHash) {
-        return false;
-      } // If the hash has changed, then it's a hash only change.
-      // This check is necessary to handle both the enter and
-      // leave hash === '' cases. The identity case falls through
-      // and is treated as a next reload.
-
-
-      return oldHash !== newHash;
-    }
-  }, {
-    key: "scrollToHash",
-    value: function scrollToHash(as) {
-      var _as$split3 = as.split('#'),
-          _as$split4 = _slicedToArray(_as$split3, 2),
-          hash = _as$split4[1]; // Scroll to top if the hash is just `#` with no value
-
-
-      if (hash === '') {
-        window.scrollTo(0, 0);
-        return;
-      } // First we check if the element by id is found
-
-
-      var idEl = document.getElementById(hash);
-
-      if (idEl) {
-        idEl.scrollIntoView();
-        return;
-      } // If there's no element with the id, we check the `name` property
-      // To mirror browsers
-
-
-      var nameEl = document.getElementsByName(hash)[0];
-
-      if (nameEl) {
-        nameEl.scrollIntoView();
-      }
-    }
-  }, {
-    key: "urlIsNew",
-    value: function urlIsNew(asPath) {
-      return this.asPath !== asPath;
-    }
-    /**
-     * Prefetch page code, you may wait for the data during page rendering.
-     * This feature only works in production!
-     * @param url the href of prefetched page
-     * @param asPath the as path of the prefetched page
-     */
-
-  }, {
-    key: "prefetch",
-    value: function prefetch(url) {
-      var _this4 = this;
-
-      var asPath = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return new Promise(function (resolve, reject) {
-        var _url_1$parse4 = url_1.parse(url),
-            pathname = _url_1$parse4.pathname,
-            protocol = _url_1$parse4.protocol;
-
-        if (!pathname || protocol) {
-          if (true) {
-            throw new Error("Invalid href passed to router: ".concat(url, " https://err.sh/zeit/next.js/invalid-href-passed"));
-          }
-
-          return;
-        } // Prefetch is not supported in development mode because it would trigger on-demand-entries
-
-
-        if (true) {
-          return;
-        }
-
-        Promise.all([_this4.pageLoader.prefetchData(url, asPath), _this4.pageLoader[options.priority ? 'loadPage' : 'prefetch'](toRoute(pathname))]).then(function () {
-          return resolve();
-        }, reject);
-      });
-    }
-  }, {
-    key: "fetchComponent",
-    value: function fetchComponent(route) {
-      var cancelled, cancel, componentResult, error;
-      return _regeneratorRuntime.async(function fetchComponent$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              cancelled = false;
-
-              cancel = this.clc = function () {
-                cancelled = true;
-              };
-
-              _context.next = 4;
-              return _regeneratorRuntime.awrap(this.pageLoader.loadPage(route));
-
-            case 4:
-              componentResult = _context.sent;
-
-              if (!cancelled) {
-                _context.next = 9;
-                break;
-              }
-
-              error = new Error("Abort fetching component for route: \"".concat(route, "\""));
-              error.cancelled = true;
-              throw error;
-
-            case 9:
-              if (cancel === this.clc) {
-                this.clc = null;
-              }
-
-              return _context.abrupt("return", componentResult);
-
-            case 11:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, null, this, null, Promise);
-    }
-  }, {
-    key: "_getData",
-    value: function _getData(fn) {
-      var _this5 = this;
-
-      var cancelled = false;
-
-      var cancel = function cancel() {
-        cancelled = true;
-      };
-
-      this.clc = cancel;
-      return fn().then(function (data) {
-        if (cancel === _this5.clc) {
-          _this5.clc = null;
-        }
-
-        if (cancelled) {
-          var err = new Error('Loading initial props cancelled');
-          err.cancelled = true;
-          throw err;
-        }
-
-        return data;
-      });
-    }
-  }, {
-    key: "getInitialProps",
-    value: function getInitialProps(Component, ctx) {
-      var App = this.components['/_app'].Component;
-
-      var AppTree = this._wrapApp(App);
-
-      ctx.AppTree = AppTree;
-      return utils_1.loadGetInitialProps(App, {
-        AppTree: AppTree,
-        Component: Component,
-        router: this,
-        ctx: ctx
-      });
-    }
-  }, {
-    key: "abortComponentLoad",
-    value: function abortComponentLoad(as) {
-      if (this.clc) {
-        var e = new Error('Route Cancelled');
-        e.cancelled = true;
-        Router.events.emit('routeChangeError', e, as);
-        this.clc();
-        this.clc = null;
-      }
-    }
-  }, {
-    key: "notify",
-    value: function notify(data) {
-      this.sub(data, this.components['/_app'].Component);
-    }
-  }], [{
-    key: "_rewriteUrlForNextExport",
-    value: function _rewriteUrlForNextExport(url) {
-      if (false) { var rewriteUrlForNextExport; } else {
-        return url;
-      }
-    }
-  }]);
-
-  return Router;
-}();
-
-exports["default"] = Router;
-Router.events = mitt_1["default"]();
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-}); // Identify /[param]/ in route string
-
-var TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
-
-function isDynamicRoute(route) {
-  return TEST_ROUTE.test(route);
-}
-
-exports.isDynamicRoute = isDynamicRoute;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function getRouteMatcher(routeRegex) {
-  var re = routeRegex.re,
-      groups = routeRegex.groups;
-  return function (pathname) {
-    var routeMatch = re.exec(pathname);
-
-    if (!routeMatch) {
-      return false;
-    }
-
-    var decode = decodeURIComponent;
-    var params = {};
-    Object.keys(groups).forEach(function (slugName) {
-      var g = groups[slugName];
-      var m = routeMatch[g.pos];
-
-      if (m !== undefined) {
-        params[slugName] = ~m.indexOf('/') ? m.split('/').map(function (entry) {
-          return decode(entry);
-        }) : g.repeat ? [decode(m)] : decode(m);
-      }
-    });
-    return params;
-  };
-}
-
-exports.getRouteMatcher = getRouteMatcher;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-regex.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function getRouteRegex(normalizedRoute) {
-  // Escape all characters that could be considered RegEx
-  var escapedRoute = (normalizedRoute.replace(/\/$/, '') || '/').replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
-  var groups = {};
-  var groupIndex = 1;
-  var parameterizedRoute = escapedRoute.replace(/\/\\\[([^/]+?)\\\](?=\/|$)/g, function (_, $1) {
-    var isCatchAll = /^(\\\.){3}/.test($1);
-    groups[$1 // Un-escape key
-    .replace(/\\([|\\{}()[\]^$+*?.-])/g, '$1').replace(/^\.{3}/, '') // eslint-disable-next-line no-sequences
-    ] = {
-      pos: groupIndex++,
-      repeat: isCatchAll
-    };
-    return isCatchAll ? '/(.+?)' : '/([^/]+?)';
-  });
-  return {
-    re: new RegExp('^' + parameterizedRoute + '(?:/)?$', 'i'),
-    groups: groups
-  };
-}
-
-exports.getRouteRegex = getRouteRegex;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/utils.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/utils.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var url_1 = __webpack_require__(/*! url */ "./node_modules/native-url/dist/index.js");
-/**
- * Utils
- */
-
-
-function execOnce(fn) {
-  var _this = this;
-
-  var used = false;
-  var result = null;
-  return function () {
-    if (!used) {
-      used = true;
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      result = fn.apply(_this, args);
-    }
-
-    return result;
-  };
-}
-
-exports.execOnce = execOnce;
-
-function getLocationOrigin() {
-  var _window$location = window.location,
-      protocol = _window$location.protocol,
-      hostname = _window$location.hostname,
-      port = _window$location.port;
-  return "".concat(protocol, "//").concat(hostname).concat(port ? ':' + port : '');
-}
-
-exports.getLocationOrigin = getLocationOrigin;
-
-function getURL() {
-  var href = window.location.href;
-  var origin = getLocationOrigin();
-  return href.substring(origin.length);
-}
-
-exports.getURL = getURL;
-
-function getDisplayName(Component) {
-  return typeof Component === 'string' ? Component : Component.displayName || Component.name || 'Unknown';
-}
-
-exports.getDisplayName = getDisplayName;
-
-function isResSent(res) {
-  return res.finished || res.headersSent;
-}
-
-exports.isResSent = isResSent;
-
-function loadGetInitialProps(App, ctx) {
-  var _a, message, res, props, _message;
-
-  return _regeneratorRuntime.async(function loadGetInitialProps$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          if (false) {}
-
-          if (!((_a = App.prototype) === null || _a === void 0 ? void 0 : _a.getInitialProps)) {
-            _context.next = 4;
-            break;
-          }
-
-          message = "\"".concat(getDisplayName(App), ".getInitialProps()\" is defined as an instance method - visit https://err.sh/zeit/next.js/get-initial-props-as-an-instance-method for more information.");
-          throw new Error(message);
-
-        case 4:
-          // when called from _app `ctx` is nested in `ctx`
-          res = ctx.res || ctx.ctx && ctx.ctx.res;
-
-          if (App.getInitialProps) {
-            _context.next = 12;
-            break;
-          }
-
-          if (!(ctx.ctx && ctx.Component)) {
-            _context.next = 11;
-            break;
-          }
-
-          _context.next = 9;
-          return _regeneratorRuntime.awrap(loadGetInitialProps(ctx.Component, ctx.ctx));
-
-        case 9:
-          _context.t0 = _context.sent;
-          return _context.abrupt("return", {
-            pageProps: _context.t0
-          });
-
-        case 11:
-          return _context.abrupt("return", {});
-
-        case 12:
-          _context.next = 14;
-          return _regeneratorRuntime.awrap(App.getInitialProps(ctx));
-
-        case 14:
-          props = _context.sent;
-
-          if (!(res && isResSent(res))) {
-            _context.next = 17;
-            break;
-          }
-
-          return _context.abrupt("return", props);
-
-        case 17:
-          if (props) {
-            _context.next = 20;
-            break;
-          }
-
-          _message = "\"".concat(getDisplayName(App), ".getInitialProps()\" should resolve to an object. But found \"").concat(props, "\" instead.");
-          throw new Error(_message);
-
-        case 20:
-          if (true) {
-            if (Object.keys(props).length === 0 && !ctx.ctx) {
-              console.warn("".concat(getDisplayName(App), " returned an empty object from `getInitialProps`. This de-optimizes and prevents automatic static optimization. https://err.sh/zeit/next.js/empty-object-getInitialProps"));
-            }
-          }
-
-          return _context.abrupt("return", props);
-
-        case 22:
-        case "end":
-          return _context.stop();
-      }
-    }
-  }, null, null, null, Promise);
-}
-
-exports.loadGetInitialProps = loadGetInitialProps;
-exports.urlObjectKeys = ['auth', 'hash', 'host', 'hostname', 'href', 'path', 'pathname', 'port', 'protocol', 'query', 'search', 'slashes'];
-
-function formatWithValidation(url, options) {
-  if (true) {
-    if (url !== null && typeof url === 'object') {
-      Object.keys(url).forEach(function (key) {
-        if (exports.urlObjectKeys.indexOf(key) === -1) {
-          console.warn("Unknown key passed via urlObject into url.format: ".concat(key));
-        }
-      });
-    }
-  }
-
-  return url_1.format(url, options);
-}
-
-exports.formatWithValidation = formatWithValidation;
-exports.SP = typeof performance !== 'undefined';
-exports.ST = exports.SP && typeof performance.mark === 'function' && typeof performance.measure === 'function';
 
 /***/ }),
 
@@ -3753,471 +2140,6 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 process.umask = function() { return 0; };
-
-
-/***/ }),
-
-/***/ "./node_modules/querystring-es3/decode.js":
-/*!************************************************!*\
-  !*** ./node_modules/querystring-es3/decode.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-// If obj.hasOwnProperty has been overridden, then calling
-// obj.hasOwnProperty(prop) will break.
-// See: https://github.com/joyent/node/issues/1707
-function hasOwnProperty(obj, prop) {
-  return Object.prototype.hasOwnProperty.call(obj, prop);
-}
-
-module.exports = function(qs, sep, eq, options) {
-  sep = sep || '&';
-  eq = eq || '=';
-  var obj = {};
-
-  if (typeof qs !== 'string' || qs.length === 0) {
-    return obj;
-  }
-
-  var regexp = /\+/g;
-  qs = qs.split(sep);
-
-  var maxKeys = 1000;
-  if (options && typeof options.maxKeys === 'number') {
-    maxKeys = options.maxKeys;
-  }
-
-  var len = qs.length;
-  // maxKeys <= 0 means that we should not limit keys count
-  if (maxKeys > 0 && len > maxKeys) {
-    len = maxKeys;
-  }
-
-  for (var i = 0; i < len; ++i) {
-    var x = qs[i].replace(regexp, '%20'),
-        idx = x.indexOf(eq),
-        kstr, vstr, k, v;
-
-    if (idx >= 0) {
-      kstr = x.substr(0, idx);
-      vstr = x.substr(idx + 1);
-    } else {
-      kstr = x;
-      vstr = '';
-    }
-
-    k = decodeURIComponent(kstr);
-    v = decodeURIComponent(vstr);
-
-    if (!hasOwnProperty(obj, k)) {
-      obj[k] = v;
-    } else if (isArray(obj[k])) {
-      obj[k].push(v);
-    } else {
-      obj[k] = [obj[k], v];
-    }
-  }
-
-  return obj;
-};
-
-var isArray = Array.isArray || function (xs) {
-  return Object.prototype.toString.call(xs) === '[object Array]';
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/querystring-es3/encode.js":
-/*!************************************************!*\
-  !*** ./node_modules/querystring-es3/encode.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-var stringifyPrimitive = function(v) {
-  switch (typeof v) {
-    case 'string':
-      return v;
-
-    case 'boolean':
-      return v ? 'true' : 'false';
-
-    case 'number':
-      return isFinite(v) ? v : '';
-
-    default:
-      return '';
-  }
-};
-
-module.exports = function(obj, sep, eq, name) {
-  sep = sep || '&';
-  eq = eq || '=';
-  if (obj === null) {
-    obj = undefined;
-  }
-
-  if (typeof obj === 'object') {
-    return map(objectKeys(obj), function(k) {
-      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
-      if (isArray(obj[k])) {
-        return map(obj[k], function(v) {
-          return ks + encodeURIComponent(stringifyPrimitive(v));
-        }).join(sep);
-      } else {
-        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
-      }
-    }).join(sep);
-
-  }
-
-  if (!name) return '';
-  return encodeURIComponent(stringifyPrimitive(name)) + eq +
-         encodeURIComponent(stringifyPrimitive(obj));
-};
-
-var isArray = Array.isArray || function (xs) {
-  return Object.prototype.toString.call(xs) === '[object Array]';
-};
-
-function map (xs, f) {
-  if (xs.map) return xs.map(f);
-  var res = [];
-  for (var i = 0; i < xs.length; i++) {
-    res.push(f(xs[i], i));
-  }
-  return res;
-}
-
-var objectKeys = Object.keys || function (obj) {
-  var res = [];
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);
-  }
-  return res;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/querystring-es3/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/querystring-es3/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.decode = exports.parse = __webpack_require__(/*! ./decode */ "./node_modules/querystring-es3/decode.js");
-exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node_modules/querystring-es3/encode.js");
-
-
-/***/ }),
-
-/***/ "./node_modules/react-is/cjs/react-is.development.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-is/cjs/react-is.development.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/** @license React v16.8.6
- * react-is.development.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-
-
-if (true) {
-  (function() {
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-// nor polyfill, then a plain number is used for performance.
-var hasSymbol = typeof Symbol === 'function' && Symbol.for;
-
-var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
-var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
-var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
-var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
-var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
-var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
-var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
-var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
-var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
-var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
-var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
-var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
-
-function isValidElementType(type) {
-  return typeof type === 'string' || typeof type === 'function' ||
-  // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
-}
-
-/**
- * Forked from fbjs/warning:
- * https://github.com/facebook/fbjs/blob/e66ba20ad5be433eb54423f2b097d829324d9de6/packages/fbjs/src/__forks__/warning.js
- *
- * Only change is we use console.warn instead of console.error,
- * and do nothing when 'console' is not supported.
- * This really simplifies the code.
- * ---
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var lowPriorityWarning = function () {};
-
-{
-  var printWarning = function (format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-    if (typeof console !== 'undefined') {
-      console.warn(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  lowPriorityWarning = function (condition, format) {
-    if (format === undefined) {
-      throw new Error('`lowPriorityWarning(condition, format, ...args)` requires a warning ' + 'message argument');
-    }
-    if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-        args[_key2 - 2] = arguments[_key2];
-      }
-
-      printWarning.apply(undefined, [format].concat(args));
-    }
-  };
-}
-
-var lowPriorityWarning$1 = lowPriorityWarning;
-
-function typeOf(object) {
-  if (typeof object === 'object' && object !== null) {
-    var $$typeof = object.$$typeof;
-    switch ($$typeof) {
-      case REACT_ELEMENT_TYPE:
-        var type = object.type;
-
-        switch (type) {
-          case REACT_ASYNC_MODE_TYPE:
-          case REACT_CONCURRENT_MODE_TYPE:
-          case REACT_FRAGMENT_TYPE:
-          case REACT_PROFILER_TYPE:
-          case REACT_STRICT_MODE_TYPE:
-          case REACT_SUSPENSE_TYPE:
-            return type;
-          default:
-            var $$typeofType = type && type.$$typeof;
-
-            switch ($$typeofType) {
-              case REACT_CONTEXT_TYPE:
-              case REACT_FORWARD_REF_TYPE:
-              case REACT_PROVIDER_TYPE:
-                return $$typeofType;
-              default:
-                return $$typeof;
-            }
-        }
-      case REACT_LAZY_TYPE:
-      case REACT_MEMO_TYPE:
-      case REACT_PORTAL_TYPE:
-        return $$typeof;
-    }
-  }
-
-  return undefined;
-}
-
-// AsyncMode is deprecated along with isAsyncMode
-var AsyncMode = REACT_ASYNC_MODE_TYPE;
-var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
-var ContextConsumer = REACT_CONTEXT_TYPE;
-var ContextProvider = REACT_PROVIDER_TYPE;
-var Element = REACT_ELEMENT_TYPE;
-var ForwardRef = REACT_FORWARD_REF_TYPE;
-var Fragment = REACT_FRAGMENT_TYPE;
-var Lazy = REACT_LAZY_TYPE;
-var Memo = REACT_MEMO_TYPE;
-var Portal = REACT_PORTAL_TYPE;
-var Profiler = REACT_PROFILER_TYPE;
-var StrictMode = REACT_STRICT_MODE_TYPE;
-var Suspense = REACT_SUSPENSE_TYPE;
-
-var hasWarnedAboutDeprecatedIsAsyncMode = false;
-
-// AsyncMode should be deprecated
-function isAsyncMode(object) {
-  {
-    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
-      hasWarnedAboutDeprecatedIsAsyncMode = true;
-      lowPriorityWarning$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
-    }
-  }
-  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
-}
-function isConcurrentMode(object) {
-  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
-}
-function isContextConsumer(object) {
-  return typeOf(object) === REACT_CONTEXT_TYPE;
-}
-function isContextProvider(object) {
-  return typeOf(object) === REACT_PROVIDER_TYPE;
-}
-function isElement(object) {
-  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-}
-function isForwardRef(object) {
-  return typeOf(object) === REACT_FORWARD_REF_TYPE;
-}
-function isFragment(object) {
-  return typeOf(object) === REACT_FRAGMENT_TYPE;
-}
-function isLazy(object) {
-  return typeOf(object) === REACT_LAZY_TYPE;
-}
-function isMemo(object) {
-  return typeOf(object) === REACT_MEMO_TYPE;
-}
-function isPortal(object) {
-  return typeOf(object) === REACT_PORTAL_TYPE;
-}
-function isProfiler(object) {
-  return typeOf(object) === REACT_PROFILER_TYPE;
-}
-function isStrictMode(object) {
-  return typeOf(object) === REACT_STRICT_MODE_TYPE;
-}
-function isSuspense(object) {
-  return typeOf(object) === REACT_SUSPENSE_TYPE;
-}
-
-exports.typeOf = typeOf;
-exports.AsyncMode = AsyncMode;
-exports.ConcurrentMode = ConcurrentMode;
-exports.ContextConsumer = ContextConsumer;
-exports.ContextProvider = ContextProvider;
-exports.Element = Element;
-exports.ForwardRef = ForwardRef;
-exports.Fragment = Fragment;
-exports.Lazy = Lazy;
-exports.Memo = Memo;
-exports.Portal = Portal;
-exports.Profiler = Profiler;
-exports.StrictMode = StrictMode;
-exports.Suspense = Suspense;
-exports.isValidElementType = isValidElementType;
-exports.isAsyncMode = isAsyncMode;
-exports.isConcurrentMode = isConcurrentMode;
-exports.isContextConsumer = isContextConsumer;
-exports.isContextProvider = isContextProvider;
-exports.isElement = isElement;
-exports.isForwardRef = isForwardRef;
-exports.isFragment = isFragment;
-exports.isLazy = isLazy;
-exports.isMemo = isMemo;
-exports.isPortal = isPortal;
-exports.isProfiler = isProfiler;
-exports.isStrictMode = isStrictMode;
-exports.isSuspense = isSuspense;
-  })();
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/react-is/index.js":
-/*!****************************************!*\
-  !*** ./node_modules/react-is/index.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (false) {} else {
-  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
-}
 
 
 /***/ }),
@@ -4973,60 +2895,487 @@ try {
 
 /***/ }),
 
-/***/ "./pages/auth/signout.js":
-/*!*******************************!*\
-  !*** ./pages/auth/signout.js ***!
-  \*******************************/
+/***/ "./pages/career.js":
+/*!*************************!*\
+  !*** ./pages/career.js ***!
+  \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-var _this = undefined,
-    _jsxFileName = "/Users/satheeskumarpalanisamy/service/careerservice/client/pages/auth/signout.js";
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _store_department_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/department-context */ "./store/department-context.js");
+/* harmony import */ var _api_build_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../api/build-client */ "./api/build-client.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
 
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/satheeskumarpalanisamy/service/careerservice/client/pages/career.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    try {
-      var response = axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/signout", {});
-      router.push("/");
-    } catch (err) {
-      console.log("Error:" + err);
-    }
+
+
+function career(props) {
+  var _this = this;
+
+  var departmentCtx = Object(react__WEBPACK_IMPORTED_MODULE_2__["useContext"])(_store_department_context__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  console.log("departmentCtx.department:" + departmentCtx.department);
+  console.log("props:" + props);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]),
+      careerDet = _useState[0],
+      setCareerDet = _useState[1];
+
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(departmentCtx.department),
+      category = _useState2[0],
+      setCategory = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(""),
+      errors = _useState3[0],
+      setErrors = _useState3[1];
+
+  var tempUpdateClick = function tempUpdateClick(id, ix) {
+    //   props.UpdateClickExec(id);
+    var DateNum = new Date().getTime();
+    axios__WEBPACK_IMPORTED_MODULE_5___default.a.post("/api/click", {
+      id: id,
+      updated: DateNum
+    }).then(function (response) {
+      console.log("response.status:" + response.status);
+      axios__WEBPACK_IMPORTED_MODULE_5___default.a.post("/api/list", {
+        department: departmentCtx.department
+      }).then(function (response) {
+        console.log("response.data:" + response.data);
+        setCareerDet(Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(response.data));
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    })["catch"](function (error) {
+      console.log(error);
+    });
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    axios__WEBPACK_IMPORTED_MODULE_5___default.a.post("/api/list", {
+      department: departmentCtx.department
+    }).then(function (response) {
+      console.log("response.data:" + response.data);
+      setCareerDet(Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(response.data));
+    })["catch"](function (error) {
+      console.log(error);
+    });
   }, []);
-  return __jsx("div", {
-    className: "container",
-    __self: _this,
+  console.log("careerDet:", careerDet.length);
+  var noContent;
+
+  if (careerDet.length === 0) {
+    noContent = __jsx("div", {
+      className: "container",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63,
+        columnNumber: 7
+      }
+    }, __jsx("div", {
+      className: "card",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64,
+        columnNumber: 9
+      }
+    }, __jsx("img", {
+      src: "no-product-found-x.png",
+      alt: "Image",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65,
+        columnNumber: 11
+      }
+    })));
+  }
+
+  var homePageLink = __jsx("span", {
+    className: "homePagelink",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 10
+      lineNumber: 72,
+      columnNumber: 5
     }
-  }, "Signing you out...");
-});
+  }, __jsx("a", {
+    href: "/",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73,
+      columnNumber: 7
+    }
+  }, __jsx("span", {
+    className: "ion-md-home icon-medium",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
+      columnNumber: 9
+    }
+  }, " ")));
+
+  var CareerPathRender = __jsx("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "row subHeadingContainer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
+      columnNumber: 7
+    }
+  }, __jsx("h2", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82,
+      columnNumber: 9
+    }
+  }, category, " "), homePageLink));
+
+  var careeritemDisplay = careerDet.map(function (indicareer, index) {
+    return __jsx("div", {
+      className: "section-plans",
+      key: indicareer._id,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 90,
+        columnNumber: 5
+      }
+    }, __jsx("div", {
+      className: "row",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 91,
+        columnNumber: 7
+      }
+    }, __jsx("div", {
+      className: "col col-width-1",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 92,
+        columnNumber: 9
+      }
+    }), __jsx("div", {
+      className: "col col-width-2",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 93,
+        columnNumber: 9
+      }
+    }, __jsx("div", {
+      className: "plan-box",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 94,
+        columnNumber: 11
+      }
+    }, __jsx("div", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 95,
+        columnNumber: 13
+      }
+    }, __jsx("ul", {
+      className: "iconDisplay",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 96,
+        columnNumber: 15
+      }
+    }, __jsx("li", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 97,
+        columnNumber: 17
+      }
+    }, __jsx("p", {
+      className: "plan-price",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 98,
+        columnNumber: 19
+      }
+    }, indicareer.shortDescription)), __jsx("li", {
+      className: "customerInter",
+      onClick: function onClick(e) {
+        return tempUpdateClick(indicareer._id, index);
+      },
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 100,
+        columnNumber: 17
+      }
+    }, __jsx("button", {
+      className: "btn",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 104,
+        columnNumber: 19
+      }
+    }, __jsx("span", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105,
+        columnNumber: 21
+      }
+    }, "Click Like")))), __jsx("p", {
+      className: "plan-price-meal",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 109,
+        columnNumber: 15
+      }
+    }, indicareer.learningDetails)), __jsx("div", {
+      className: "historyDet",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 111,
+        columnNumber: 13
+      }
+    }, __jsx("ul", {
+      className: "iconDisplay",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 112,
+        columnNumber: 15
+      }
+    }, __jsx("li", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 113,
+        columnNumber: 17
+      }
+    }, __jsx("i", {
+      className: "ion-ios-calendar icon-small",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 114,
+        columnNumber: 19
+      }
+    }), indicareer.dateEntered, " Shared Date"), __jsx("li", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 117,
+        columnNumber: 17
+      }
+    }, __jsx("i", {
+      className: "ion-ios-cash icon-small",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 118,
+        columnNumber: 19
+      }
+    }), indicareer.salaryDetail, " Lakhs Salary Annum"), __jsx("li", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 121,
+        columnNumber: 17
+      }
+    }, __jsx("i", {
+      className: "ion-ios-heart icon-small",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 122,
+        columnNumber: 19
+      }
+    }), indicareer.noOfLikes, " Likes"), __jsx("li", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 125,
+        columnNumber: 17
+      }
+    }, __jsx("i", {
+      className: "ion-ios-time icon-small",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 126,
+        columnNumber: 19
+      }
+    }), indicareer.experience, " Years Of Experience"))))), __jsx("div", {
+      className: "col col-width-3",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 133,
+        columnNumber: 9
+      }
+    })), __jsx("br", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 135,
+        columnNumber: 7
+      }
+    }), __jsx("br", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 136,
+        columnNumber: 7
+      }
+    }));
+  });
+  return props.currentUser ? __jsx("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 141,
+      columnNumber: 5
+    }
+  }, __jsx("br", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 142,
+      columnNumber: 7
+    }
+  }), __jsx("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 143,
+      columnNumber: 7
+    }
+  }, CareerPathRender, careeritemDisplay, noContent)) : __jsx("h1", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 150,
+      columnNumber: 5
+    }
+  }, "You are NOT signed in");
+}
+
+career.getInitialProps = function _callee(context) {
+  var client, _await$client$get, data;
+
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          console.log("Edit Page!");
+          client = Object(_api_build_client__WEBPACK_IMPORTED_MODULE_4__["default"])(context);
+          _context.next = 4;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(client.get("/api/users/currentuser"));
+
+        case 4:
+          _await$client$get = _context.sent;
+          data = _await$client$get.data;
+          console.log("data:" + data.currentUser);
+          return _context.abrupt("return", data);
+
+        case 8:
+        case "end":
+          return _context.stop();
+      }
+    }
+  }, null, null, null, Promise);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (career);
 
 /***/ }),
 
-/***/ 2:
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fauth%2Fsignout&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fauth%2Fsignout.js ***!
-  \*******************************************************************************************************************************************************************************/
+/***/ "./store/department-context.js":
+/*!*************************************!*\
+  !*** ./store/department-context.js ***!
+  \*************************************/
+/*! exports provided: DepartmentContextProvider, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DepartmentContextProvider", function() { return DepartmentContextProvider; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/satheeskumarpalanisamy/service/careerservice/client/store/department-context.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var DepartmentContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])({
+  department: '',
+  showDepartment: function showDepartment(departmentData) {}
+});
+function DepartmentContextProvider(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
+      activeDepartment = _useState[0],
+      setActiveDepartment = _useState[1];
+
+  function showDepartmentHandler(DepartmentData) {
+    setActiveDepartment(DepartmentData);
+  }
+
+  var context = {
+    department: activeDepartment,
+    showDepartment: showDepartmentHandler
+  };
+  return __jsx(DepartmentContext.Provider, {
+    value: context,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 5
+    }
+  }, props.children);
+}
+/* harmony default export */ __webpack_exports__["default"] = (DepartmentContext);
+
+/***/ }),
+
+/***/ 5:
+/*!***************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fcareer&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fcareer.js ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fauth%2Fsignout&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fauth%2Fsignout.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fauth%2Fsignout&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fauth%2Fsignout.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcareer&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fcareer.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcareer&absolutePagePath=%2FUsers%2Fsatheeskumarpalanisamy%2Fservice%2Fcareerservice%2Fclient%2Fpages%2Fcareer.js!./");
 
 
 /***/ }),
@@ -5042,5 +3391,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=signout.js.map
+},[[5,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=career.js.map

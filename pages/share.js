@@ -15,6 +15,7 @@ const SharePage = (props) => {
   const[experience,setExperience]  = useState(0);
   const[subCategoryArray,setSubCategoryArray] = useState([]);
   const[curError,setCurError] = useState('');
+  const[userId,setUserId] = useState('');
 
   const dataReducer = [
         { title: 'Information Technology', skills: [ "Others",
@@ -278,7 +279,8 @@ const SharePage = (props) => {
           dateEntered: formatted_date,
           created: DateNum,
           updated: DateNum,
-          experience: experience
+          experience: experience,
+          userId: userId
       };
       console.log("jobTitle:" + jobTitle);
       console.log("category:" + category);
@@ -387,6 +389,15 @@ const SharePage = (props) => {
                               <select value={subCategory} onChange={event => setSubCategory(event.target.value)}>
                               {subCategoryList}
                               </select>
+                          </div>
+                      </div>
+
+                      <div className="row">
+                          <div className="col span-1-of-3">
+                              <label>Email Id</label>
+                          </div>
+                          <div className="col span-2-of-3">
+                              <input type="text" name="email" id="email" placeholder="Email Id" required onChange={event => setUserId(event.target.value)} value={userId} />
                           </div>
                       </div>
 
